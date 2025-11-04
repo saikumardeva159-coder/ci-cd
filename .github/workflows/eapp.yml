@@ -16,8 +16,8 @@ jobs:
        cache: maven
    - name: build with maven
      run: mvn -B package --file pom.xml
-     -name: deploy eapp to tomcat
-     run:  curl -v -u  -T $tomcat_user:$tomcat_pwd /home/runner/work/ci-cd/ci-cd/target/Ecomm.war 'http://13.215.190.59:8080/manager/text/deploy?path=/Ecomm.war' 
+     - name: deploy eapp to tomcat
+     run: curl -v -u  -T $tomcat_user:$tomcat_pwd /home/runner/work/ci-cd/ci-cd/target/Ecomm.war 'http://13.215.190.59:8080/manager/text/deploy?path=/Ecomm.war' 
    
    
    
